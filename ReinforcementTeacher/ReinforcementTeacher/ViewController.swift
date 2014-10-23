@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import User
 import CoreData
 
 class ViewController: UIViewController {
