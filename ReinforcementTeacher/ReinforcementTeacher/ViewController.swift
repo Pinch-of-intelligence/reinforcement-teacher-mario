@@ -7,8 +7,19 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
+    
+    lazy var managedObjectContext : NSManagedObjectContext? = {
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        if let managedObjectContext = appDelegate.managedObjectContext {
+            return managedObjectContext
+        }
+        else {
+            return nil
+        }
+        }()
 
     // Settings for the server
     let prefix = "http://"
@@ -31,14 +42,17 @@ class ViewController: UIViewController {
         case Left = 1, Right, Fire, Jump
     }
     
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as User
+        user.name = "een naam"
+        user.ipaddress = "de ip address"
+        
         // Do any additional setup after loading the view, typically from a nib.
         var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
