@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07FAFA6B19F984A600CE9170 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FAFA6A19F984A600CE9170 /* User.swift */; };
 		2AF1DD1519F9815F0030B864 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF1DD1419F9815F0030B864 /* AppDelegate.swift */; };
 		2AF1DD1819F9815F0030B864 /* ReinforcementTeacher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2AF1DD1619F9815F0030B864 /* ReinforcementTeacher.xcdatamodeld */; };
 		2AF1DD1A19F9815F0030B864 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF1DD1919F9815F0030B864 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07FAFA6A19F984A600CE9170 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2AF1DD0F19F9815F0030B864 /* ReinforcementTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReinforcementTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AF1DD1319F9815F0030B864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AF1DD1419F9815F0030B864 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				2AF1DD1E19F9815F0030B864 /* Images.xcassets */,
 				2AF1DD2019F9815F0030B864 /* LaunchScreen.xib */,
 				2AF1DD1619F9815F0030B864 /* ReinforcementTeacher.xcdatamodeld */,
+				07FAFA6A19F984A600CE9170 /* User.swift */,
 				2AF1DD1219F9815F0030B864 /* Supporting Files */,
 			);
 			path = ReinforcementTeacher;
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07FAFA6B19F984A600CE9170 /* User.swift in Sources */,
 				2AF1DD1A19F9815F0030B864 /* ViewController.swift in Sources */,
 				2AF1DD1819F9815F0030B864 /* ReinforcementTeacher.xcdatamodeld in Sources */,
 				2AF1DD1519F9815F0030B864 /* AppDelegate.swift in Sources */,
@@ -413,6 +417,7 @@
 				2AF1DD3319F9815F0030B864 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2AF1DD3419F9815F0030B864 /* Build configuration list for PBXNativeTarget "ReinforcementTeacherTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				2AF1DD3619F9815F0030B864 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
