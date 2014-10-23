@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07FAFA7319F98F0C00CE9170 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FAFA7219F98F0C00CE9170 /* User.swift */; };
 		2AD67DC419F984B5000C17BA /* HttpRequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD67DC319F984B5000C17BA /* HttpRequestSender.swift */; };
 		2AD67DC719F98B28000C17BA /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD67DC519F98B28000C17BA /* ConfigViewController.swift */; };
 		2AD67DC819F98B28000C17BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD67DC619F98B28000C17BA /* LoginViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07FAFA7219F98F0C00CE9170 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2AD67DC319F984B5000C17BA /* HttpRequestSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequestSender.swift; sourceTree = "<group>"; };
 		2AD67DC519F98B28000C17BA /* ConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
 		2AD67DC619F98B28000C17BA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		2AF1DD1119F9815F0030B864 /* ReinforcementTeacher */ = {
 			isa = PBXGroup;
 			children = (
+				07FAFA7219F98F0C00CE9170 /* User.swift */,
 				2AD67DC519F98B28000C17BA /* ConfigViewController.swift */,
 				2AD67DC619F98B28000C17BA /* LoginViewController.swift */,
 				2AD67DC319F984B5000C17BA /* HttpRequestSender.swift */,
@@ -230,6 +233,7 @@
 				2AF1DD1819F9815F0030B864 /* ReinforcementTeacher.xcdatamodeld in Sources */,
 				2AD67DC719F98B28000C17BA /* ConfigViewController.swift in Sources */,
 				2AF1DD1519F9815F0030B864 /* AppDelegate.swift in Sources */,
+				07FAFA7319F98F0C00CE9170 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
