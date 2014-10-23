@@ -23,9 +23,6 @@ class LoginViewController: UIViewController {
         }()
     
     var user :User?
-
-
-    @IBOutlet weak var userNameField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
