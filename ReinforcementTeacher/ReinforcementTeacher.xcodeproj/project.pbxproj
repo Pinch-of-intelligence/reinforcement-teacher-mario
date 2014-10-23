@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2AD67DC419F984B5000C17BA /* HttpRequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD67DC319F984B5000C17BA /* HttpRequestSender.swift */; };
+		2AD67DC719F98B28000C17BA /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD67DC519F98B28000C17BA /* ConfigViewController.swift */; };
+		2AD67DC819F98B28000C17BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD67DC619F98B28000C17BA /* LoginViewController.swift */; };
 		2AF1DD1519F9815F0030B864 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF1DD1419F9815F0030B864 /* AppDelegate.swift */; };
 		2AF1DD1819F9815F0030B864 /* ReinforcementTeacher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2AF1DD1619F9815F0030B864 /* ReinforcementTeacher.xcdatamodeld */; };
 		2AF1DD1A19F9815F0030B864 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF1DD1919F9815F0030B864 /* ViewController.swift */; };
@@ -29,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		2AD67DC319F984B5000C17BA /* HttpRequestSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequestSender.swift; sourceTree = "<group>"; };
+		2AD67DC519F98B28000C17BA /* ConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
+		2AD67DC619F98B28000C17BA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2AF1DD0F19F9815F0030B864 /* ReinforcementTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReinforcementTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AF1DD1319F9815F0030B864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AF1DD1419F9815F0030B864 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 		2AF1DD1119F9815F0030B864 /* ReinforcementTeacher */ = {
 			isa = PBXGroup;
 			children = (
+				2AD67DC519F98B28000C17BA /* ConfigViewController.swift */,
+				2AD67DC619F98B28000C17BA /* LoginViewController.swift */,
 				2AD67DC319F984B5000C17BA /* HttpRequestSender.swift */,
 				2AF1DD1419F9815F0030B864 /* AppDelegate.swift */,
 				2AF1DD1919F9815F0030B864 /* ViewController.swift */,
@@ -218,9 +224,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AD67DC819F98B28000C17BA /* LoginViewController.swift in Sources */,
 				2AD67DC419F984B5000C17BA /* HttpRequestSender.swift in Sources */,
 				2AF1DD1A19F9815F0030B864 /* ViewController.swift in Sources */,
 				2AF1DD1819F9815F0030B864 /* ReinforcementTeacher.xcdatamodeld in Sources */,
+				2AD67DC719F98B28000C17BA /* ConfigViewController.swift in Sources */,
 				2AF1DD1519F9815F0030B864 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
