@@ -1,6 +1,6 @@
 //
 //  LoginViewController.swift
-//  NESController2
+//  NESController
 //
 //  Created by Stef Janssen on 17/10/14.
 //  Copyright (c) 2014 Stef Janssen. All rights reserved.
@@ -30,13 +30,14 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         println("loaded login view")
         user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as? User
-        // Do any additional setup after loading the view.
-    }
+        }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "loginSegue"{
-            user!.ipaddress = "192.168.2.25:8001"
-            user!.username = "Roland"
+            if user?.ipaddress == nil{
+                user!.ipaddress = "192.168.2.25:8001"
+            }
+            user!.username = userNameField.text
         }
     }
     

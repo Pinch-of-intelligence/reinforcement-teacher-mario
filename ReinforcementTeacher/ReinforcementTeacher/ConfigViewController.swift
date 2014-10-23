@@ -23,6 +23,7 @@ class ConfigViewController: UIViewController {
         }()
     
     @IBOutlet weak var ipfield: UITextField!
+    
     var user:User?
     
     override func viewDidLoad() {
@@ -45,6 +46,7 @@ class ConfigViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "returnToViewControllerSegue"{
+            user!.ipaddress = ipfield.text
         }
     }
 

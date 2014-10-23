@@ -26,7 +26,6 @@ class ViewController: UIViewController {
     // Settings for the server
     let prefix = "http://"
     let serveradress = "/marioserver"
-    var username = "no_username"
 
     // Variables...
     let queue = NSOperationQueue()
@@ -48,6 +47,7 @@ class ViewController: UIViewController {
        // user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as? User
 //        user!.username = "een naam"
   //      user!.ipaddress = "192.168.2.25:8001"
+
         
         // Do any additional setup after loading the view, typically from a nib.
         //var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
@@ -73,9 +73,9 @@ class ViewController: UIViewController {
         if pressedFire {
             command = command + "fire"
         }
-        if (queue.operationCount == 0)
+        if (queue.operationCount == 0 && user != nil)
         {
-            var NESparams = ["option":"pressButtons",  "command":command, "name":username] as Dictionary<String, String>
+            var NESparams = ["option":"pressButtons",  "command":command, "name":user!.username] as Dictionary<String, String>
             let myurl = prefix + user!.ipaddress + serveradress
             let requestSender = HttpRequestSender(params: NESparams, url: myurl)
             queue.addOperation(requestSender)
