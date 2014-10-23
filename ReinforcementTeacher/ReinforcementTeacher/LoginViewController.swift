@@ -22,8 +22,8 @@ class LoginViewController: UIViewController {
         }()
     
     var user :User?
-    
-    @IBOutlet weak var usernamefield: UITextField!
+
+    @IBOutlet weak var namefield: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "loginSegue"{
             user!.ipaddress = "192.168.2.25:8001"
-            user!.username = usernamefield.text
+            user!.username = namefield.text
         }
     }
     
