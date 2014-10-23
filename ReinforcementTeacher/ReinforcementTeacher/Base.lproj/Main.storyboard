@@ -81,7 +81,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background_nes.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hfC-0T-PFs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_nes.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hfC-0T-PFs">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                             </imageView>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8V-uN-JFT">
@@ -222,6 +222,11 @@
                             <constraint firstItem="3zc-df-6V1" firstAttribute="top" secondItem="aek-GC-MwX" secondAttribute="bottom" id="uEU-dg-lQg"/>
                             <constraint firstItem="y9S-Wb-9hK" firstAttribute="width" secondItem="etL-DL-sQg" secondAttribute="width" id="z2F-MC-eQT"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="hfC-0T-PFs"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
