@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 
 class LoginViewController: UIViewController {
+
     
     lazy var managedObjectContext : NSManagedObjectContext? = {
         let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
@@ -23,8 +24,8 @@ class LoginViewController: UIViewController {
     
     var user :User?
 
-    @IBOutlet weak var namefield: UITextField!
-    
+
+    @IBOutlet weak var userNameField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         println("loaded login view")
@@ -35,7 +36,7 @@ class LoginViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "loginSegue"{
             user!.ipaddress = "192.168.2.25:8001"
-            user!.username = namefield.text
+            user!.username = "Roland"
         }
     }
     

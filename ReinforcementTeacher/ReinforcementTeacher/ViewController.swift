@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class ViewController: UIViewController {
-    
+    /*
     lazy var managedObjectContext : NSManagedObjectContext? = {
         let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         if let managedObjectContext = appDelegate.managedObjectContext {
@@ -36,18 +36,18 @@ class ViewController: UIViewController {
     var pressedRight = false;
     var pressedFire = false;
     var pressedJump = true;
-
-    
+*/
+    /*
     //these indices correspond to the tag values
     enum ButtonTypes: Int {
         case Left = 1, Right, Fire, Jump
-    }
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as? User
-        user!.username = "een naam"
-        user!.ipaddress = "192.168.2.25:8001"
+       // user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as? User
+//        user!.username = "een naam"
+  //      user!.ipaddress = "192.168.2.25:8001"
         
         // Do any additional setup after loading the view, typically from a nib.
         //var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+/*
     func update() {
         
         var command: String = ""
@@ -80,7 +80,7 @@ class ViewController: UIViewController {
             let requestSender = HttpRequestSender(params: NESparams, url: myurl)
             queue.addOperation(requestSender)
         }
-    }
+    }*/
 
 
 }
