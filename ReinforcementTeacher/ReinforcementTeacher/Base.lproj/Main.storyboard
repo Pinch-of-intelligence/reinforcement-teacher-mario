@@ -306,9 +306,9 @@
     </scenes>
     <resources>
         <image name="background_nes.jpg" width="535" height="189"/>
-        <image name="left_d_pad" width="535" height="189"/>
-        <image name="nes_red_button" width="535" height="189"/>
-        <image name="right_d_pad" width="535" height="189"/>
+        <image name="left_d_pad" width="295" height="200"/>
+        <image name="nes_red_button" width="183" height="175"/>
+        <image name="right_d_pad" width="296" height="198"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dbE-Fv-mXH"/>
