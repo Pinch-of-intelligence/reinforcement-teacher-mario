@@ -44,7 +44,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.setMasksBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="mvQ-Em-7Ym" kind="show" id="V9T-Bs-uKK"/>
+                                    <segue destination="mvQ-Em-7Ym" kind="show" identifier="loginSegue" id="U4E-MQ-LoM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,11 +61,6 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="HoZ-Kz-Otv"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="namefield" destination="QwY-Px-qmd" id="YOt-Cg-ngL"/>
-                        <outlet property="username" destination="QwY-Px-qmd" id="Ir4-pV-be7"/>
-                        <outlet property="usernamefield" destination="QwY-Px-qmd" id="nl8-db-SIo"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMJ-cm-2bk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,11 +98,6 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="touchDown:" destination="mvQ-Em-7Ym" eventType="touchDown" id="hRb-1v-M2m"/>
-                                    <action selector="touchUpInside:" destination="mvQ-Em-7Ym" eventType="touchUpInside" id="Ngq-6H-EW6"/>
-                                    <action selector="touchUpOutside:" destination="mvQ-Em-7Ym" eventType="touchUpOutside" id="8Vm-u8-LfI"/>
-                                </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etL-DL-sQg">
                                 <rect key="frame" x="116" y="262" width="100" height="75"/>
@@ -125,11 +115,6 @@
                                         <integer key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="touchDown:" destination="mvQ-Em-7Ym" eventType="touchDown" id="nPp-FT-14O"/>
-                                    <action selector="touchUpInside:" destination="mvQ-Em-7Ym" eventType="touchUpInside" id="fqs-5w-Miz"/>
-                                    <action selector="touchUpOutside:" destination="mvQ-Em-7Ym" eventType="touchUpOutside" id="KVF-ft-bVs"/>
-                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6X-Se-ifI">
                                 <rect key="frame" x="180" y="172" width="241" height="56"/>
@@ -167,11 +152,6 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="touchDown:" destination="mvQ-Em-7Ym" eventType="touchDown" id="F10-UN-UpJ"/>
-                                    <action selector="touchUpInside:" destination="mvQ-Em-7Ym" eventType="touchUpInside" id="zGy-QX-BiB"/>
-                                    <action selector="touchUpOutside:" destination="mvQ-Em-7Ym" eventType="touchUpOutside" id="KNv-wY-IxK"/>
-                                </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9S-Wb-9hK">
                                 <rect key="frame" x="16" y="262" width="100" height="75"/>
@@ -184,11 +164,6 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="touchDown:" destination="mvQ-Em-7Ym" eventType="touchDown" id="bfV-Vo-mpF"/>
-                                    <action selector="touchUpInside:" destination="mvQ-Em-7Ym" eventType="touchUpInside" id="9wl-jz-yBY"/>
-                                    <action selector="touchUpOutside:" destination="mvQ-Em-7Ym" eventType="touchUpOutside" id="tbk-U3-eOB"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zc-df-6V1">
                                 <rect key="frame" x="538" y="20" width="46" height="30"/>
@@ -200,7 +175,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="qQ3-60-5vT" kind="show" identifier="configSegue" id="Ixq-mB-Og3"/>
+                                    <segue destination="qQ3-60-5vT" kind="show" identifier="configSegue" id="raQ-AX-Byz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -232,9 +207,6 @@
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="textview" destination="W6X-Se-ifI" id="m3W-Gp-Rj8"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifq-47-7pA" sceneMemberID="firstResponder"/>
             </objects>
@@ -280,7 +252,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="submit:" destination="qQ3-60-5vT" eventType="touchUpInside" id="P8i-2Q-hUk"/>
-                                    <segue destination="mvQ-Em-7Ym" kind="show" identifier="returnToViewControllerSegue" id="dbE-Fv-mXH"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqc-sE-ewu">
@@ -317,7 +288,4 @@
         <image name="nes_red_button" width="183" height="175"/>
         <image name="right_d_pad" width="296" height="198"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="V9T-Bs-uKK"/>
-    </inferredMetricsTieBreakers>
 </document>
