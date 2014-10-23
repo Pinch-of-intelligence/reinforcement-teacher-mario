@@ -10,6 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // Settings for the server
+    let prefix = "http://"
+    var myip = "192.168.2.25:8001"
+    let serveradress = "/marioserver"
+    var username = "no_username"
+
+    // Variables...
+    let queue = NSOperationQueue()
+    
+    // Booleans for the buttons
+    var pressedLeft = true;
+    var pressedRight = false;
+    var pressedFire = false;
+    var pressedJump = true;
+
+    
+    //these indices correspond to the tag values
+    enum ButtonTypes: Int {
+        case Left = 1, Right, Fire, Jump
+    }
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -18,6 +41,30 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    func update() {
+        
+        var command: String = ""
+        if pressedRight{
+            command = command + "right"
+        }
+        else if pressedLeft{
+            command = command + "left"
+        }
+        if pressedJump {
+            command = command + "jump"
+        }
+        if pressedFire {
+            command = command + "fire"
+        }
+        if (queue.operationCount == 0)
+        {
+            var NESparams = ["option":"pressButtons",  "command":command, "name":username] as Dictionary<String, String>
+            let myurl = prefix + myip + serveradress
+            let requestSender = HttpRequestSender(params: NESparams, url: myurl)
+            queue.addOperation(requestSender)
+        }
     }
 
 
