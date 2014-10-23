@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as User
-        user.name = "een naam"
+        user.username = "een naam"
         user.ipaddress = "de ip address"
         
         // Do any additional setup after loading the view, typically from a nib.
