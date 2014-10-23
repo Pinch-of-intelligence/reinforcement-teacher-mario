@@ -7,20 +7,30 @@
 //
 
 import UIKit
+import CoreData
 
 class ConfigViewController: UIViewController {
 
 
+    lazy var managedObjectContext : NSManagedObjectContext? = {
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        if let managedObjectContext = appDelegate.managedObjectContext {
+            return managedObjectContext
+        }
+        else {
+            return nil
+        }
+        }()
+    
     @IBOutlet weak var ipfield: UITextField!
-    let user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as User
+    var user:User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as? User
+        
         println("loaded config view")
-        if ipfield != nil {
-            ipfield.text = myip
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,23 +40,11 @@ class ConfigViewController: UIViewController {
     
     
     @IBAction func submit(sender: UIButton) {
-        if delegate != nil{
-            delegate!.myip = ipfield.text
-        }
-        else {
-            println("nopediedoop")
-        }
+
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "returnToViewControllerSegue"{
-            let vc = segue.destinationViewController as ViewController
-            if let ip = ipfield?.text? {
-                println("setting ip")
-                vc.myip = ip
-            } else {
-                return
-            }
         }
     }
 

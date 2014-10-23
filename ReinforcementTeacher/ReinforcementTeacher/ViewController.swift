@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as User
+        user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as? User
         user!.username = "een naam"
         user!.ipaddress = "192.168.2.25:8001"
         
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
         if (queue.operationCount == 0)
         {
             var NESparams = ["option":"pressButtons",  "command":command, "name":username] as Dictionary<String, String>
-            let myurl = prefix + user!.ipfield + serveradress
+            let myurl = prefix + user!.ipaddress + serveradress
             let requestSender = HttpRequestSender(params: NESparams, url: myurl)
             queue.addOperation(requestSender)
         }
