@@ -45,12 +45,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //let user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: sel//f.managedObjectContext!) as User
-        //user.name = "een naam"
-        //user.ipaddress = "de ip address"
+        let user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as User
+        user.name = "een naam"
+        user.ipaddress = "de ip address"
         
         // Do any additional setup after loading the view, typically from a nib.
-        var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+        //var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
     }
     
     override func didReceiveMemoryWarning() {

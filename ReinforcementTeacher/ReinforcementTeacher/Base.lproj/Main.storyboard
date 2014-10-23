@@ -1,35 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3Yd-ef-zlJ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReinforcementTeacher" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <segue destination="3Yd-ef-zlJ" kind="show" id="o26-YT-D9y"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
         <!--LoginScreen-->
         <scene sceneID="2PZ-2s-8bH">
             <objects>
-                <viewController title="LoginScreen" id="3Yd-ef-zlJ" customClass="LoginViewController" customModule="NESController2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="LoginScreen" id="3Yd-ef-zlJ" customClass="LoginViewController" customModule="ReinforcementTeacher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qVZ-Jf-jWm"/>
                         <viewControllerLayoutGuide type="bottom" id="fSj-tt-Ymd"/>
@@ -64,7 +44,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.setMasksBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="mvQ-Em-7Ym" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="KXN-py-jVF"/>
+                                    <segue destination="mvQ-Em-7Ym" kind="show" id="V9T-Bs-uKK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -87,12 +67,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMJ-cm-2bk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="911" y="111"/>
+            <point key="canvasLocation" x="367" y="185"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mtx-ec-jj6">
             <objects>
-                <viewController id="mvQ-Em-7Ym" customClass="ViewController" customModule="NESController2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mvQ-Em-7Ym" customClass="ViewController" customModule="ReinforcementTeacher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aek-GC-MwX"/>
                         <viewControllerLayoutGuide type="bottom" id="lTf-ea-9dx"/>
@@ -251,12 +231,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifq-47-7pA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1775" y="185"/>
+            <point key="canvasLocation" x="1229" y="185"/>
         </scene>
         <!--Config View Controller-->
         <scene sceneID="md7-jz-fkM">
             <objects>
-                <viewController id="qQ3-60-5vT" customClass="ConfigViewController" customModule="NESController2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qQ3-60-5vT" customClass="ConfigViewController" customModule="ReinforcementTeacher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PED-3Y-gNK"/>
                         <viewControllerLayoutGuide type="bottom" id="4AZ-95-TgM"/>
@@ -331,6 +311,6 @@
         <image name="right_d_pad" width="535" height="189"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KXN-py-jVF"/>
+        <segue reference="dbE-Fv-mXH"/>
     </inferredMetricsTieBreakers>
 </document>
