@@ -63,6 +63,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="username" destination="QwY-Px-qmd" id="Ir4-pV-be7"/>
+                        <outlet property="usernamefield" destination="QwY-Px-qmd" id="nl8-db-SIo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMJ-cm-2bk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -316,6 +317,6 @@
         <image name="right_d_pad" width="296" height="198"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dbE-Fv-mXH"/>
+        <segue reference="V9T-Bs-uKK"/>
     </inferredMetricsTieBreakers>
 </document>

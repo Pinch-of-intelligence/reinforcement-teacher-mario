@@ -21,9 +21,10 @@ class ViewController: UIViewController {
         }
         }()
 
+    var user :User?
+    
     // Settings for the server
     let prefix = "http://"
-    var myip = "192.168.2.25:8001"
     let serveradress = "/marioserver"
     var username = "no_username"
 
@@ -44,10 +45,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as User
-        user.username = "een naam"
-        user.ipaddress = "de ip address"
+        user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as User
+        user!.username = "een naam"
+        user!.ipaddress = "192.168.2.25:8001"
         
         // Do any additional setup after loading the view, typically from a nib.
         //var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
         if (queue.operationCount == 0)
         {
             var NESparams = ["option":"pressButtons",  "command":command, "name":username] as Dictionary<String, String>
-            let myurl = prefix + myip + serveradress
+            let myurl = prefix + user!.ipfield + serveradress
             let requestSender = HttpRequestSender(params: NESparams, url: myurl)
             queue.addOperation(requestSender)
         }

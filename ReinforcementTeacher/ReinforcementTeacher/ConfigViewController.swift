@@ -12,13 +12,11 @@ class ConfigViewController: UIViewController {
 
 
     @IBOutlet weak var ipfield: UITextField!
-    
-    var delegate: ViewController? = nil
-    
-    var myip: NSString = ""
+    let user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as User
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         println("loaded config view")
         if ipfield != nil {
             ipfield.text = myip

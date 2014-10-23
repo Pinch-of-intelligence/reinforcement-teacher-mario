@@ -7,26 +7,35 @@
 //
 
 import UIKit
+import CoreData
 
 class LoginViewController: UIViewController {
-
-    @IBOutlet weak var username: UITextField!
+    
+    lazy var managedObjectContext : NSManagedObjectContext? = {
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        if let managedObjectContext = appDelegate.managedObjectContext {
+            return managedObjectContext
+        }
+        else {
+            return nil
+        }
+        }()
+    
+    var user :User?
+    
+    @IBOutlet weak var usernamefield: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         println("loaded login view")
-        username?.text = ""
+        user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as User
         // Do any additional setup after loading the view.
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "loginSegue"{
-            let vc = segue.destinationViewController as ViewController
-            if let name = username?.text? {
-                vc.username = name
-            } else {
-                return
-            }
+            user!.ipaddress = "192.168.2.25:8001"
+            user!.username = usernamefield.text
         }
     }
     
