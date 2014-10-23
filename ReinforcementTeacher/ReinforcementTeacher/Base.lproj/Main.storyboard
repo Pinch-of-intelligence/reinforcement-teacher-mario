@@ -252,7 +252,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="submit:" destination="qQ3-60-5vT" eventType="touchUpInside" id="P8i-2Q-hUk"/>
-                                    <segue destination="mvQ-Em-7Ym" kind="show" identifier="returnToViewControllerSegue" id="dbE-Fv-mXH"/>
+                                    <segue destination="ecP-f5-sBg" kind="showDetail" id="4Um-pb-sji"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqc-sE-ewu">
@@ -280,12 +280,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDx-P0-qVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2463" y="185"/>
+            <point key="canvasLocation" x="1351" y="945"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="j6x-D0-iJN">
             <objects>
-                <viewController id="ecP-f5-sBg" sceneMemberID="viewController">
+                <viewController id="ecP-f5-sBg" customClass="NESViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F5D-Ng-3uN"/>
                         <viewControllerLayoutGuide type="bottom" id="dH1-iG-NsI"/>
@@ -293,11 +293,59 @@
                     <view key="view" contentMode="scaleToFill" id="iPe-2S-rQC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ld-s8-3Kr">
+                                <rect key="frame" x="96" y="285" width="46" height="30"/>
+                                <state key="normal" title="Left" backgroundImage="left_d_pad">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9U-ws-QEA">
+                                <rect key="frame" x="150" y="285" width="46" height="30"/>
+                                <state key="normal" title="Right" backgroundImage="right_d_pad">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcu-dr-uaC">
+                                <rect key="frame" x="378" y="285" width="46" height="30"/>
+                                <state key="normal" title="Fire" backgroundImage="nes_red_button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeM-bN-U7k">
+                                <rect key="frame" x="432" y="285" width="46" height="30"/>
+                                <state key="normal" title="Jump" backgroundImage="nes_red_button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmv-ko-AQ1">
+                                <rect key="frame" x="554" y="20" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4MK-bJ-xMh"/>
+                                    <constraint firstAttribute="width" constant="46" id="va5-PN-Yjl"/>
+                                </constraints>
+                                <state key="normal" title="Config">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qQ3-60-5vT" kind="showDetail" id="b4J-K4-RYb"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Cyv-bF-JZB">
+                                <rect key="frame" x="198" y="343" width="118" height="31"/>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Cyv-bF-JZB"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d26-wL-UUw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="518" y="1312"/>
         </scene>
     </scenes>
     <resources>
@@ -306,4 +354,7 @@
         <image name="nes_red_button" width="183" height="175"/>
         <image name="right_d_pad" width="296" height="198"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4Um-pb-sji"/>
+    </inferredMetricsTieBreakers>
 </document>
