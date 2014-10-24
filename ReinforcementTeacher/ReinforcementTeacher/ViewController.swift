@@ -29,13 +29,14 @@ class ViewController: UIViewController {
 
     // Variables...
     let queue = NSOperationQueue()
+    var previousCommand = "";
     
     // Booleans for the buttons
-    var pressedLeft = true;
+    var pressedLeft = false;
     var pressedRight = false;
     var pressedFire = false;
-    var pressedJump = true;
-
+    var pressedJump = false;
+    
     
     //these indices correspond to the tag values
     enum ButtonTypes: Int {
@@ -46,7 +47,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as? User
         user!.username = "een naam"
-        user!.ipaddress = "192.168.2.25:8001"
+        user!.ipaddress = "192.168.2.17:8001"
 
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -73,9 +74,48 @@ class ViewController: UIViewController {
         if pressedFire {
             command = command + "fire"
         }
+        
+        var option = "";
+        
+        // Determine the command
+        if (command == previousCommand)  {
+            if("" != command)
+            {
+                /*
+                Date currentDate = new Date();
+                Long timeDifference = currentDate.getTime() - lastUpdate.getTime();
+                if (timeDifference > 1000)
+                {
+                    lastUpdate = new Date();
+                    option ="refreshTime";
+                }
+                else
+                {
+                    return;
+                }*/
+                return;
+            }
+            else
+            {
+                // Do nothing
+                return;
+            }
+        } 
+        else {
+//            lastUpdate = new Date();
+            if (command.isEmpty) {
+                option = "releaseButtons";
+                println("No command given");
+            } else {
+                option = "pressButtons";
+                println("Command given: " + command);
+            }
+        }
+        previousCommand = command;
+        
         if (queue.operationCount == 0 && user != nil)
         {
-            var NESparams = ["option":"pressButtons",  "command":command, "name":"ROland"] as Dictionary<String, String>
+            var NESparams = ["option":option,  "command":command, "name":"ROland"] as Dictionary<String, String>
             let myurl = prefix + user!.ipaddress + serveradress
             let requestSender = HttpRequestSender(params: NESparams, url: myurl)
             queue.addOperation(requestSender)
