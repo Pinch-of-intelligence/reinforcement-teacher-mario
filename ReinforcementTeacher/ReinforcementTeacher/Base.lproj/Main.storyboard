@@ -98,6 +98,11 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="touchDown:" destination="mvQ-Em-7Ym" eventType="touchDown" id="rAT-Vo-Zgx"/>
+                                    <action selector="touchUpInside:" destination="mvQ-Em-7Ym" eventType="touchUpInside" id="wpK-Bz-HER"/>
+                                    <action selector="touchUpOutside:" destination="mvQ-Em-7Ym" eventType="touchUpOutside" id="aGz-rJ-3y5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etL-DL-sQg">
                                 <rect key="frame" x="116" y="262" width="100" height="75"/>
@@ -115,6 +120,11 @@
                                         <integer key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="touchDown:" destination="mvQ-Em-7Ym" eventType="touchDown" id="Wuh-gT-ME2"/>
+                                    <action selector="touchUpInside:" destination="mvQ-Em-7Ym" eventType="touchUpInside" id="aj4-4z-uiC"/>
+                                    <action selector="touchUpOutside:" destination="mvQ-Em-7Ym" eventType="touchUpOutside" id="EcE-9D-ksI"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6X-Se-ifI">
                                 <rect key="frame" x="180" y="172" width="241" height="56"/>
@@ -152,6 +162,11 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="touchDown:" destination="mvQ-Em-7Ym" eventType="touchDown" id="BMv-8r-K2L"/>
+                                    <action selector="touchUpInside:" destination="mvQ-Em-7Ym" eventType="touchUpInside" id="YF2-4s-tTG"/>
+                                    <action selector="touchUpOutside:" destination="mvQ-Em-7Ym" eventType="touchUpOutside" id="7S0-gA-mSM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9S-Wb-9hK">
                                 <rect key="frame" x="16" y="262" width="100" height="75"/>
@@ -164,6 +179,11 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchDown:" destination="mvQ-Em-7Ym" eventType="touchDown" id="dho-me-uts"/>
+                                    <action selector="touchUpInside:" destination="mvQ-Em-7Ym" eventType="touchUpInside" id="djb-1y-EbU"/>
+                                    <action selector="touchUpOutside:" destination="mvQ-Em-7Ym" eventType="touchUpOutside" id="TaW-we-Awo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zc-df-6V1">
                                 <rect key="frame" x="538" y="20" width="46" height="30"/>
