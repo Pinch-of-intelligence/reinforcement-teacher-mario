@@ -37,6 +37,7 @@ class HttpRequestSender: NSOperation {
             }
             
             myUrl = myUrl.substringToIndex(myUrl.endIndex.predecessor())
+            myUrl = myUrl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
             println(myUrl)
             
             var url = NSURL(string: myUrl)

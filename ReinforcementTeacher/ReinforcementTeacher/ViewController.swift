@@ -36,7 +36,8 @@ class ViewController: UIViewController {
     var pressedRight = false;
     var pressedFire = false;
     var pressedJump = false;
-    
+    var lastUpdate = NSDate()
+    let updateTime = 0.02;
     
     //these indices correspond to the tag values
     enum ButtonTypes: Int {
@@ -51,7 +52,7 @@ class ViewController: UIViewController {
 
         
         // Do any additional setup after loading the view, typically from a nib.
-        var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+        var timer = NSTimer.scheduledTimerWithTimeInterval(updateTime, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,19 +82,20 @@ class ViewController: UIViewController {
         if (command == previousCommand)  {
             if("" != command)
             {
-                /*
-                Date currentDate = new Date();
-                Long timeDifference = currentDate.getTime() - lastUpdate.getTime();
-                if (timeDifference > 1000)
+                
+                var currentDate = NSDate()
+
+                var timeDifference = currentDate.timeIntervalSinceDate(lastUpdate)
+                println("Time difference : " + timeDifference.description);
+                if (timeDifference > 1.0)
                 {
-                    lastUpdate = new Date();
-                    option ="refreshTime";
+                    lastUpdate = NSDate()
+                    option = "refreshTime"
                 }
                 else
                 {
                     return;
-                }*/
-                return;
+                }
             }
             else
             {
@@ -102,7 +104,7 @@ class ViewController: UIViewController {
             }
         } 
         else {
-//            lastUpdate = new Date();
+            lastUpdate = NSDate()
             if (command.isEmpty) {
                 option = "releaseButtons";
                 println("No command given");
@@ -115,9 +117,12 @@ class ViewController: UIViewController {
         
         if (queue.operationCount == 0 && user != nil)
         {
-            var NESparams = ["option":option,  "command":command, "name":"ROland"] as Dictionary<String, String>
-            let myurl = prefix + user!.ipaddress + serveradress
-            let requestSender = HttpRequestSender(params: NESparams, url: myurl)
+            var NESparams = ["option":option,  "command":command, "name":user!.username] as Dictionary<String, String>
+            var myurl = prefix + user!.ipaddress + serveradress
+            var second = myurl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+            
+            println("The url is: " + second!)
+            let requestSender = HttpRequestSender(params: NESparams, url: second!)
             queue.addOperation(requestSender)
         }
     }
