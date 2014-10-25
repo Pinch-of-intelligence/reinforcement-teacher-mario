@@ -25,6 +25,8 @@ class ViewController: UIViewController {
 
     var user :User?
 
+    //Background httprequest sender
+    var requestSender: HttpRequestSender?
     // Settings for the server
     let prefix = "http://"
     let serveradress = "/marioserver"
@@ -40,6 +42,9 @@ class ViewController: UIViewController {
     var pressedJump = false;
     var lastUpdate = NSDate()
     let updateTime = 0.02;
+    
+    //Error display textfield
+    @IBOutlet weak var errorTextField: UITextView!
     
     //these indices correspond to the tag values
     enum ButtonTypes: Int {
@@ -124,11 +129,22 @@ class ViewController: UIViewController {
             var second = myurl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
             
             //println("The url is: " + second!)
-            let requestSender = HttpRequestSender(params: NESparams, url: second!)
-            queue.addOperation(requestSender)
+            requestSender = HttpRequestSender(params: NESparams, url: second!, vc: self)
+            queue.addOperation(requestSender!)
         }
     }
 
+    func setErrorField(text: String)
+    {
+        var attrs =
+        [
+            NSForegroundColorAttributeName: UIColor.redColor(),
+        ]
+        
+        let attString = NSAttributedString(string: text, attributes: attrs)
+        self.errorTextField.attributedText = attString
+
+    }
     
     @IBAction func touchDown(sender: AnyObject) {
         

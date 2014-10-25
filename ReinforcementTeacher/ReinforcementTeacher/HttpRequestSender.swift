@@ -14,9 +14,11 @@ class HttpRequestSender: NSOperation {
     
     var params: Dictionary<String, String>
     
-    init(params: Dictionary<String, String>, url: String) {
+    var vc: ViewController
+    init(params: Dictionary<String, String>, url: String, vc: ViewController) {
         self.params = params
         self.url = url
+        self.vc = vc
     }
     
     var available:Bool = true
@@ -41,21 +43,30 @@ class HttpRequestSender: NSOperation {
             //println(myUrl)
             
             var url = NSURL(string: myUrl)
+            var request = NSMutableURLRequest(URL: url!)
+            var session = NSURLSession.sharedSession()
             
-            let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
-                if(error==nil)
-                {
-                    //println(NSString(data: data, encoding: NSUTF8StringEncoding))
+            
+            var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+                if(error != nil) {
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.vc.setErrorField("there was an error, please come to our stand:\n" + error!.localizedDescription)
+                    }
                 }
-                else
-                {
-                    //println("");
+                else {
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.vc.setErrorField("")
+                    }
+                    
                 }
-            }
+                
+                self.available = true
+            })
             task.resume()
-            available = true
-            return true
+            while !available{
+                
+            }
         }
-        return false
+        return true
     }
 }

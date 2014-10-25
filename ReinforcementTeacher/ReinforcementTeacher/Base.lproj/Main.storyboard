@@ -18,17 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="QwY-Px-qmd">
-                                <rect key="frame" x="221" y="285" width="159" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="159" id="NT1-n4-FgD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kW5-c0-EGv">
                                 <rect key="frame" x="240" y="339" width="121" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.8802224864" green="0.00048087099700000002" blue="0.027441812560000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="121" id="9g0-7x-eLR"/>
                                     <constraint firstAttribute="height" constant="30" id="vEf-Iv-JLh"/>
@@ -47,6 +39,14 @@
                                     <segue destination="mvQ-Em-7Ym" kind="show" identifier="loginSegue" id="U4E-MQ-LoM"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="QwY-Px-qmd">
+                                <rect key="frame" x="221" y="285" width="159" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="159" id="NT1-n4-FgD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -169,48 +169,52 @@
                                     <constraint firstAttribute="height" constant="30" id="mef-zR-AP6"/>
                                     <constraint firstAttribute="width" constant="46" id="nvC-2O-Aeh"/>
                                 </constraints>
+                                <color key="tintColor" red="0.8802224864" green="0.00048087099700000002" blue="0.027441812560000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Config">
+                                    <color key="titleColor" red="0.88022248641304346" green="0.00048087099701029051" blue="0.027441812560725795" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="qQ3-60-5vT" kind="show" identifier="configSegue" id="raQ-AX-Byz"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="asdf" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6X-Se-ifI">
-                                <rect key="frame" x="179" y="172" width="240" height="56"/>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6X-Se-ifI">
+                                <rect key="frame" x="43" y="411" width="360" height="129"/>
                                 <color key="tintColor" red="0.90238620920000001" green="0.032476512030000002" blue="0.062112574900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="Nr4-mv-pTK"/>
-                                    <constraint firstAttribute="width" constant="241" id="tvW-z6-nUL"/>
+                                    <constraint firstAttribute="height" constant="129" id="5bm-RS-YEN"/>
+                                    <constraint firstAttribute="width" constant="360" id="ect-6N-Idq"/>
                                 </constraints>
-                                <color key="textColor" red="0.88022248641304346" green="0.00048087099701029051" blue="0.027441812560725795" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="W6X-Se-ifI" secondAttribute="centerX" id="9gx-Do-0db"/>
                             <constraint firstItem="f8V-uN-JFT" firstAttribute="leading" secondItem="leo-KF-Nue" secondAttribute="trailing" constant="20" id="9qF-qH-hqW"/>
-                            <constraint firstItem="WEG-Ci-mUM" firstAttribute="height" secondItem="EEh-F5-GGC" secondAttribute="height" id="BNj-Lc-1kh"/>
                             <constraint firstAttribute="centerY" secondItem="y9S-Wb-9hK" secondAttribute="centerY" id="DfK-Sl-0im"/>
+                            <constraint firstItem="WEG-Ci-mUM" firstAttribute="width" secondItem="EEh-F5-GGC" secondAttribute="width" id="FTd-f3-a7X"/>
                             <constraint firstItem="3zc-df-6V1" firstAttribute="trailing" secondItem="EEh-F5-GGC" secondAttribute="trailingMargin" id="Fr9-IB-Zc5"/>
+                            <constraint firstAttribute="centerY" secondItem="WEG-Ci-mUM" secondAttribute="centerY" id="HMu-gl-vPG"/>
                             <constraint firstItem="f8V-uN-JFT" firstAttribute="trailing" secondItem="EEh-F5-GGC" secondAttribute="trailingMargin" id="IrZ-Hu-QL9"/>
-                            <constraint firstItem="etL-DL-sQg" firstAttribute="top" secondItem="W6X-Se-ifI" secondAttribute="bottom" constant="34" id="Qyg-jt-RHg"/>
+                            <constraint firstAttribute="centerX" secondItem="WEG-Ci-mUM" secondAttribute="centerX" id="WvO-jm-mUy"/>
+                            <constraint firstItem="WEG-Ci-mUM" firstAttribute="height" secondItem="EEh-F5-GGC" secondAttribute="height" id="XbZ-Y5-CVl"/>
                             <constraint firstItem="y9S-Wb-9hK" firstAttribute="leading" secondItem="EEh-F5-GGC" secondAttribute="leadingMargin" id="XeW-6n-77e"/>
-                            <constraint firstAttribute="centerY" secondItem="WEG-Ci-mUM" secondAttribute="centerY" id="aGT-05-hjI"/>
+                            <constraint firstItem="W6X-Se-ifI" firstAttribute="leading" secondItem="EEh-F5-GGC" secondAttribute="leadingMargin" constant="27" id="ZC3-jf-wlm"/>
+                            <constraint firstItem="lTf-ea-9dx" firstAttribute="top" secondItem="W6X-Se-ifI" secondAttribute="bottom" constant="16" id="cNL-Tu-TJG"/>
                             <constraint firstItem="etL-DL-sQg" firstAttribute="leading" secondItem="y9S-Wb-9hK" secondAttribute="trailing" id="gKk-28-Q4j"/>
                             <constraint firstItem="leo-KF-Nue" firstAttribute="top" secondItem="f8V-uN-JFT" secondAttribute="top" id="llG-1k-Ka7"/>
-                            <constraint firstAttribute="centerX" secondItem="WEG-Ci-mUM" secondAttribute="centerX" id="lrK-V0-RCF"/>
                             <constraint firstItem="y9S-Wb-9hK" firstAttribute="top" secondItem="etL-DL-sQg" secondAttribute="top" id="nwF-TO-i6o"/>
                             <constraint firstAttribute="centerY" secondItem="f8V-uN-JFT" secondAttribute="centerY" id="oX6-2T-4dU"/>
-                            <constraint firstItem="WEG-Ci-mUM" firstAttribute="width" secondItem="EEh-F5-GGC" secondAttribute="width" id="qOd-qM-r84"/>
                             <constraint firstItem="3zc-df-6V1" firstAttribute="top" secondItem="aek-GC-MwX" secondAttribute="bottom" id="uEU-dg-lQg"/>
                             <constraint firstItem="y9S-Wb-9hK" firstAttribute="width" secondItem="etL-DL-sQg" secondAttribute="width" id="z2F-MC-eQT"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="errorTextField" destination="W6X-Se-ifI" id="Ve0-Ve-fCV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifq-47-7pA" sceneMemberID="firstResponder"/>
             </objects>
@@ -239,7 +243,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9B-KN-Mn2">
                                 <rect key="frame" x="240" y="337" width="121" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.8802224864" green="0.00048087099700000002" blue="0.027441812560000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="0bn-sD-jT5"/>
                                     <constraint firstAttribute="width" constant="121" id="bKj-Rm-1Gp"/>
@@ -293,6 +297,6 @@
         <image name="right_d_pad" width="296" height="198"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uUA-ON-C5H"/>
+        <segue reference="U4E-MQ-LoM"/>
     </inferredMetricsTieBreakers>
 </document>

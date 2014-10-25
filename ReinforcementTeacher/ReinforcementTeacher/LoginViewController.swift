@@ -23,18 +23,29 @@ class LoginViewController: UIViewController {
         }()
     
     var user :User?
-    
 
     @IBOutlet weak var usernameField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as User
+        let fetchRequest = NSFetchRequest(entityName: "User")
+        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [User] {
+            if fetchResults.count == 0 {
+                user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as User
+                user!.ipaddress = "192.168.2.25:8001"
+                managedObjectContext!.save(nil)
+            }
+            else {
+                user = fetchResults[0]
+            }
         }
+        
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "loginSegue"{
-            user!.ipaddress = "192.168.2.25:8001"
             user!.username = usernameField.text
+            managedObjectContext!.save(nil)
         }
     }
     
