@@ -46,7 +46,6 @@ class ConfigViewController: UIViewController {
             if let myip = ipfield.text {
                 let fetchRequest = NSFetchRequest(entityName: "User")
                 if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [User] {
-                    println(myip)
                     user = fetchResults[0]
                     user?.ipaddress = myip
                     managedObjectContext!.save(nil)

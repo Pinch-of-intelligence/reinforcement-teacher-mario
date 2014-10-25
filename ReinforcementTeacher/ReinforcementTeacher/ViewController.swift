@@ -123,7 +123,7 @@ class ViewController: UIViewController {
             var myurl = prefix + user!.ipaddress + serveradress
             var second = myurl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
             
-            println("The url is: " + second!)
+            //println("The url is: " + second!)
             let requestSender = HttpRequestSender(params: NESparams, url: second!)
             queue.addOperation(requestSender)
         }
@@ -136,16 +136,16 @@ class ViewController: UIViewController {
         switch(buttonType)
         {
         case .Left:
-        println("Pressed Left")
+        //println("Pressed Left")
         pressedLeft = true;
         case .Right:
-        println("Pressed Right")
+        //println("Pressed Right")
         pressedRight = true;
         case .Fire:
-        println("Pressed Fire")
+        //println("Pressed Fire")
         pressedFire = true;
         case .Jump:
-        println("Pressed Jump")
+        //println("Pressed Jump")
         pressedJump = true;
         default:
         println("Untagged button pressed")
@@ -168,16 +168,16 @@ class ViewController: UIViewController {
         switch(buttonType)
         {
         case .Left:
-        println("Released Left")
+        //println("Released Left")
         pressedLeft = false;
         case .Right:
-        println("Released Right")
+        //println("Released Right")
         pressedRight = false;
         case .Fire:
-        println("Released Fire")
+        //println("Released Fire")
         pressedFire = false;
         case .Jump:
-        println("Released Jump")
+        //println("Released Jump")
         pressedJump = false;
         default:
         println("Released untagged button ")

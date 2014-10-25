@@ -32,24 +32,24 @@ class HttpRequestSender: NSOperation {
             myUrl += "?"
             for k in params.keys
             {
-                println(k)
+                //println(k)
                 myUrl += k + "=" + params[k]! + "&"
             }
             
             myUrl = myUrl.substringToIndex(myUrl.endIndex.predecessor())
             myUrl = myUrl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
-            println(myUrl)
+            //println(myUrl)
             
             var url = NSURL(string: myUrl)
             
             let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
                 if(error==nil)
                 {
-                    println(NSString(data: data, encoding: NSUTF8StringEncoding))
+                    //println(NSString(data: data, encoding: NSUTF8StringEncoding))
                 }
                 else
                 {
-                    println("There was a very huge problem!");
+                    //println("");
                 }
             }
             task.resume()
