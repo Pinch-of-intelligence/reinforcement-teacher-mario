@@ -33,7 +33,9 @@ class ConfigViewController: UIViewController {
         if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [User] {
             user = fetchResults[0]
             if user != nil{
-                ipfield!.text = user!.ipaddress
+                if ipfield != nil {
+                    ipfield!.text = user!.ipaddress
+                }
             }
             else {
                 println("lolwhut")
