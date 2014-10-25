@@ -34,18 +34,15 @@ class HttpRequestSender: NSOperation {
             myUrl += "?"
             for k in params.keys
             {
-                //println(k)
                 myUrl += k + "=" + params[k]! + "&"
             }
             
             myUrl = myUrl.substringToIndex(myUrl.endIndex.predecessor())
             myUrl = myUrl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
-            //println(myUrl)
             
             var url = NSURL(string: myUrl)
             var request = NSMutableURLRequest(URL: url!)
             var session = NSURLSession.sharedSession()
-            
             
             var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
                 if(error != nil) {
@@ -63,8 +60,7 @@ class HttpRequestSender: NSOperation {
                 self.available = true
             })
             task.resume()
-            while !available{
-                
+            while !available {
             }
         }
         return true

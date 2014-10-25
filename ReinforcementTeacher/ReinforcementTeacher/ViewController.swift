@@ -93,7 +93,6 @@ class ViewController: UIViewController {
                 var currentDate = NSDate()
 
                 var timeDifference = currentDate.timeIntervalSinceDate(lastUpdate)
-                //println("Time difference : " + timeDifference.description);
                 if (timeDifference > 1.0)
                 {
                     lastUpdate = NSDate()
@@ -114,10 +113,8 @@ class ViewController: UIViewController {
             lastUpdate = NSDate()
             if (command.isEmpty) {
                 option = "releaseButtons";
-                //println("No command given");
             } else {
                 option = "pressButtons";
-                //println("Command given: " + command);
             }
         }
         previousCommand = command;
@@ -128,7 +125,6 @@ class ViewController: UIViewController {
             var myurl = prefix + user!.ipaddress + serveradress
             var second = myurl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
             
-            //println("The url is: " + second!)
             requestSender = HttpRequestSender(params: NESparams, url: second!, vc: self)
             queue.addOperation(requestSender!)
         }
@@ -152,16 +148,12 @@ class ViewController: UIViewController {
         switch(buttonType)
         {
         case .Left:
-        //println("Pressed Left")
         pressedLeft = true;
         case .Right:
-        //println("Pressed Right")
         pressedRight = true;
         case .Fire:
-        //println("Pressed Fire")
         pressedFire = true;
         case .Jump:
-        //println("Pressed Jump")
         pressedJump = true;
         default:
         println("Untagged button pressed")
@@ -184,16 +176,12 @@ class ViewController: UIViewController {
         switch(buttonType)
         {
         case .Left:
-        //println("Released Left")
         pressedLeft = false;
         case .Right:
-        //println("Released Right")
         pressedRight = false;
         case .Fire:
-        //println("Released Fire")
         pressedFire = false;
         case .Jump:
-        //println("Released Jump")
         pressedJump = false;
         default:
         println("Released untagged button ")

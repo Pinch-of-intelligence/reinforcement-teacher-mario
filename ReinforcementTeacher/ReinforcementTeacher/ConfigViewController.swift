@@ -40,7 +40,6 @@ class ConfigViewController: UIViewController {
             else {
                 println("lolwhut")
             }
-            
         }
     }
 
