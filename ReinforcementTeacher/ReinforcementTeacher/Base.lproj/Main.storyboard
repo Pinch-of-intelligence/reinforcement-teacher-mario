@@ -81,7 +81,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="left_d_pad_pressed" translatesAutoresizingMaskIntoConstraints="NO" id="WEG-Ci-mUM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background_nes" translatesAutoresizingMaskIntoConstraints="NO" id="WEG-Ci-mUM">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                             </imageView>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8V-uN-JFT">
@@ -287,8 +287,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background_nes" width="535" height="189"/>
         <image name="left_d_pad" width="295" height="200"/>
-        <image name="left_d_pad_pressed" width="295" height="200"/>
         <image name="nes_red_button" width="183" height="175"/>
         <image name="right_d_pad" width="296" height="198"/>
     </resources>
