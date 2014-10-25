@@ -29,9 +29,11 @@ class ConfigViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as? User
-        
-        println("loaded config view")
+        let fetchRequest = NSFetchRequest(entityName: "User")
+        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [User] {
+            user = fetchResults[0]
+            ipfield!.text = user!.ipaddress
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,17 +41,19 @@ class ConfigViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    @IBAction func submit(sender: UIButton) {
-
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "returnToViewControllerSegue"{
-            user!.ipaddress = ipfield.text
+            if let myip = ipfield.text {
+                let fetchRequest = NSFetchRequest(entityName: "User")
+                if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [User] {
+                    println(myip)
+                    user = fetchResults[0]
+                    user?.ipaddress = myip
+                    managedObjectContext!.save(nil)
+                }
+            }
         }
     }
-
 
     /*
     // MARK: - Navigation

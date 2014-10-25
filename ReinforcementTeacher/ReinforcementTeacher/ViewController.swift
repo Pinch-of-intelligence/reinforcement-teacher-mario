@@ -11,6 +11,8 @@ import CoreData
 
 class ViewController: UIViewController {
     
+    
+    //CoreData variables
     lazy var managedObjectContext : NSManagedObjectContext? = {
         let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         if let managedObjectContext = appDelegate.managedObjectContext {
@@ -46,12 +48,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as? User
-        user!.username = "een naam"
-        user!.ipaddress = "192.168.2.17:8001"
-
         
-        // Do any additional setup after loading the view, typically from a nib.
+        let fetchRequest = NSFetchRequest(entityName: "User")
+        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [User] {
+            user = fetchResults[0]
+        }
+        
         var timer = NSTimer.scheduledTimerWithTimeInterval(updateTime, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
     }
     
@@ -86,7 +88,7 @@ class ViewController: UIViewController {
                 var currentDate = NSDate()
 
                 var timeDifference = currentDate.timeIntervalSinceDate(lastUpdate)
-                println("Time difference : " + timeDifference.description);
+                //println("Time difference : " + timeDifference.description);
                 if (timeDifference > 1.0)
                 {
                     lastUpdate = NSDate()
@@ -107,10 +109,10 @@ class ViewController: UIViewController {
             lastUpdate = NSDate()
             if (command.isEmpty) {
                 option = "releaseButtons";
-                println("No command given");
+                //println("No command given");
             } else {
                 option = "pressButtons";
-                println("Command given: " + command);
+                //println("Command given: " + command);
             }
         }
         previousCommand = command;

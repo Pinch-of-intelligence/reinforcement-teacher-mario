@@ -81,11 +81,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_nes" translatesAutoresizingMaskIntoConstraints="NO" id="qge-0y-AJW">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_nes.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hfC-0T-PFs">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="left_d_pad_pressed" translatesAutoresizingMaskIntoConstraints="NO" id="WEG-Ci-mUM">
+                                <rect key="frame" x="-1" y="0.0" width="600" height="556"/>
                             </imageView>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8V-uN-JFT">
                                 <rect key="frame" x="484" y="262" width="100" height="75"/>
@@ -186,8 +183,8 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6X-Se-ifI">
-                                <rect key="frame" x="0.0" y="500" width="600" height="56"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <rect key="frame" x="179" y="172" width="240" height="56"/>
+                                <color key="tintColor" red="0.90238620920000001" green="0.032476512030000002" blue="0.062112574900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="Nr4-mv-pTK"/>
                                     <constraint firstAttribute="width" constant="241" id="tvW-z6-nUL"/>
@@ -209,34 +206,29 @@
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="W6X-Se-ifI" secondAttribute="centerX" constant="-0.5" id="9gx-Do-0db"/>
                             <constraint firstItem="f8V-uN-JFT" firstAttribute="leading" secondItem="leo-KF-Nue" secondAttribute="trailing" constant="20" id="9qF-qH-hqW"/>
-                            <constraint firstAttribute="centerX" secondItem="hfC-0T-PFs" secondAttribute="centerX" id="Bsz-6O-dk0"/>
+                            <constraint firstItem="WEG-Ci-mUM" firstAttribute="height" secondItem="EEh-F5-GGC" secondAttribute="height" id="BNj-Lc-1kh"/>
                             <constraint firstAttribute="centerY" secondItem="y9S-Wb-9hK" secondAttribute="centerY" id="DfK-Sl-0im"/>
                             <constraint firstItem="3zc-df-6V1" firstAttribute="trailing" secondItem="EEh-F5-GGC" secondAttribute="trailingMargin" id="Fr9-IB-Zc5"/>
-                            <constraint firstAttribute="centerY" secondItem="hfC-0T-PFs" secondAttribute="centerY" id="Hb2-ei-aJ1"/>
                             <constraint firstItem="f8V-uN-JFT" firstAttribute="trailing" secondItem="EEh-F5-GGC" secondAttribute="trailingMargin" id="IrZ-Hu-QL9"/>
                             <constraint firstItem="etL-DL-sQg" firstAttribute="top" secondItem="W6X-Se-ifI" secondAttribute="bottom" constant="34" id="Qyg-jt-RHg"/>
-                            <constraint firstAttribute="height" secondItem="hfC-0T-PFs" secondAttribute="height" id="RAZ-3J-m2m"/>
                             <constraint firstItem="y9S-Wb-9hK" firstAttribute="leading" secondItem="EEh-F5-GGC" secondAttribute="leadingMargin" id="XeW-6n-77e"/>
-                            <constraint firstAttribute="width" secondItem="hfC-0T-PFs" secondAttribute="width" id="fgN-cW-6Oa"/>
+                            <constraint firstAttribute="centerY" secondItem="WEG-Ci-mUM" secondAttribute="centerY" id="aGT-05-hjI"/>
                             <constraint firstItem="etL-DL-sQg" firstAttribute="leading" secondItem="y9S-Wb-9hK" secondAttribute="trailing" id="gKk-28-Q4j"/>
                             <constraint firstItem="leo-KF-Nue" firstAttribute="top" secondItem="f8V-uN-JFT" secondAttribute="top" id="llG-1k-Ka7"/>
+                            <constraint firstAttribute="centerX" secondItem="WEG-Ci-mUM" secondAttribute="centerX" id="lrK-V0-RCF"/>
                             <constraint firstItem="y9S-Wb-9hK" firstAttribute="top" secondItem="etL-DL-sQg" secondAttribute="top" id="nwF-TO-i6o"/>
                             <constraint firstAttribute="centerY" secondItem="f8V-uN-JFT" secondAttribute="centerY" id="oX6-2T-4dU"/>
+                            <constraint firstItem="WEG-Ci-mUM" firstAttribute="width" secondItem="EEh-F5-GGC" secondAttribute="width" id="qOd-qM-r84"/>
                             <constraint firstItem="3zc-df-6V1" firstAttribute="top" secondItem="aek-GC-MwX" secondAttribute="bottom" id="uEU-dg-lQg"/>
                             <constraint firstItem="y9S-Wb-9hK" firstAttribute="width" secondItem="etL-DL-sQg" secondAttribute="width" id="z2F-MC-eQT"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="hfC-0T-PFs"/>
-                            </mask>
-                        </variation>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifq-47-7pA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1144" y="185"/>
+            <point key="canvasLocation" x="1154" y="185"/>
         </scene>
         <!--Config View Controller-->
         <scene sceneID="md7-jz-fkM">
@@ -277,8 +269,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.setMasksBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="submit:" destination="qQ3-60-5vT" eventType="touchUpInside" id="P8i-2Q-hUk"/>
-                                    <segue destination="mvQ-Em-7Ym" kind="show" id="uUA-ON-C5H"/>
+                                    <segue destination="mvQ-Em-7Ym" kind="show" identifier="returnToViewControllerSegue" id="uUA-ON-C5H"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqc-sE-ewu">
@@ -301,7 +292,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ipfield" destination="vqc-sE-ewu" id="j8t-lr-MwJ"/>
+                        <outlet property="ipfield" destination="vqc-sE-ewu" id="6fg-Cy-ISl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDx-P0-qVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -310,13 +301,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background_nes" width="535" height="189"/>
-        <image name="background_nes.jpg" width="535" height="189"/>
         <image name="left_d_pad" width="295" height="200"/>
+        <image name="left_d_pad_pressed" width="295" height="200"/>
         <image name="nes_red_button" width="183" height="175"/>
         <image name="right_d_pad" width="296" height="198"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="U4E-MQ-LoM"/>
+        <segue reference="uUA-ON-C5H"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -28,8 +28,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        println("loaded login view")
-        user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as? User
+        user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as User
         }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
