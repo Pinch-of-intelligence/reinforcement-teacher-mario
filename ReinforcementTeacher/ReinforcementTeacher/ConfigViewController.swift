@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ConfigViewController: UIViewController {
+class ConfigViewController: UIViewController, UITextFieldDelegate {
 
 
     lazy var managedObjectContext : NSManagedObjectContext? = {
@@ -35,6 +35,7 @@ class ConfigViewController: UIViewController {
             ipfield!.text = user!.ipaddress
 
         }
+        ipfield.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,6 +54,11 @@ class ConfigViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
     /*

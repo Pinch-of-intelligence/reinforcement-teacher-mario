@@ -9,8 +9,7 @@
 import UIKit
 import CoreData
 
-class LoginViewController: UIViewController {
-
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     lazy var managedObjectContext : NSManagedObjectContext? = {
         let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
@@ -39,6 +38,7 @@ class LoginViewController: UIViewController {
                 user = fetchResults[0]
             }
         }
+        usernameField.delegate = self
         
     }
     
@@ -53,6 +53,11 @@ class LoginViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
 }

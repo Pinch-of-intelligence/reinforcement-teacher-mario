@@ -39,7 +39,7 @@
                                     <rect key="frame" x="340" y="172" width="121" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="mvQ-Em-7Ym" kind="show" identifier="loginSegue" id="U4E-MQ-LoM"/>
+                                    <segue destination="mvQ-Em-7Ym" kind="show" id="bBc-aI-mA5"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="QwY-Px-qmd">
@@ -59,7 +59,9 @@
                             <constraint firstItem="kW5-c0-EGv" firstAttribute="top" secondItem="QwY-Px-qmd" secondAttribute="bottom" constant="25" id="5ro-Gp-a6w"/>
                             <constraint firstItem="kW5-c0-EGv" firstAttribute="centerX" secondItem="QwY-Px-qmd" secondAttribute="centerX" id="LFf-Tx-VNf"/>
                             <constraint firstAttribute="centerX" secondItem="QwY-Px-qmd" secondAttribute="centerX" id="WDc-TO-sHR"/>
-                            <constraint firstItem="QwY-Px-qmd" firstAttribute="top" secondItem="qVZ-Jf-jWm" secondAttribute="bottom" constant="25" id="g7l-fE-eQD"/>
+                            <constraint firstItem="QwY-Px-qmd" firstAttribute="top" secondItem="qVZ-Jf-jWm" secondAttribute="bottom" constant="25" id="g7l-fE-eQD">
+                                <variation key="heightClass=regular-widthClass=regular" constant="75"/>
+                            </constraint>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -103,7 +105,7 @@
                                     <segue destination="qQ3-60-5vT" kind="show" identifier="configSegue" id="raQ-AX-Byz"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6X-Se-ifI">
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6X-Se-ifI">
                                 <rect key="frame" x="43" y="411" width="360" height="129"/>
                                 <color key="tintColor" red="0.90238620920000001" green="0.032476512030000002" blue="0.062112574900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -121,7 +123,7 @@
                                 </variation>
                             </textView>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9S-Wb-9hK">
-                                <rect key="frame" x="16" y="249.5" width="130" height="100"/>
+                                <rect key="frame" x="16" y="270" width="80" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="FqX-Xz-MTx">
@@ -142,7 +144,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etL-DL-sQg">
-                                <rect key="frame" x="146" y="249.5" width="130" height="198"/>
+                                <rect key="frame" x="96" y="270" width="80" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" backgroundImage="right_d_pad">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -154,7 +156,7 @@
                                     <action selector="touchUpOutside:" destination="mvQ-Em-7Ym" eventType="touchUpOutside" id="EcE-9D-ksI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8V-uN-JFT">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8V-uN-JFT">
                                 <rect key="frame" x="524" y="274.5" width="60" height="50"/>
                                 <color key="backgroundColor" red="0.89438264270000001" green="0.20979345939999999" blue="0.20979345939999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Jump" backgroundImage="nes_red_button">
@@ -170,20 +172,17 @@
                                 <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="324" y="170" width="70" height="60"/>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="601" y="312" width="183" height="175"/>
-                                </variation>
                                 <connections>
                                     <action selector="touchDown:" destination="mvQ-Em-7Ym" eventType="touchDown" id="rAT-Vo-Zgx"/>
                                     <action selector="touchUpInside:" destination="mvQ-Em-7Ym" eventType="touchUpInside" id="wpK-Bz-HER"/>
                                     <action selector="touchUpOutside:" destination="mvQ-Em-7Ym" eventType="touchUpOutside" id="aGz-rJ-3y5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leo-KF-Nue">
-                                <rect key="frame" x="444" y="274.5" width="60" height="50"/>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leo-KF-Nue">
+                                <rect key="frame" x="446" y="274" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.89438264270000001" green="0.20979345939999999" blue="0.20979345939999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="cUa-z3-tBI">
+                                    <constraint firstAttribute="height" constant="60" id="cUa-z3-tBI">
                                         <variation key="heightClass=compact-widthClass=compact" constant="60"/>
                                         <variation key="heightClass=regular-widthClass=regular" constant="120"/>
                                     </constraint>
@@ -217,6 +216,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="f8V-uN-JFT" firstAttribute="width" secondItem="leo-KF-Nue" secondAttribute="width" id="7ky-Lp-nVX"/>
                             <constraint firstItem="f8V-uN-JFT" firstAttribute="leading" secondItem="leo-KF-Nue" secondAttribute="trailing" constant="10" id="9qF-qH-hqW"/>
                             <constraint firstAttribute="centerY" secondItem="y9S-Wb-9hK" secondAttribute="centerY" id="DfK-Sl-0im"/>
                             <constraint firstItem="WEG-Ci-mUM" firstAttribute="width" secondItem="EEh-F5-GGC" secondAttribute="width" id="FTd-f3-a7X"/>
@@ -227,31 +227,16 @@
                             <constraint firstItem="WEG-Ci-mUM" firstAttribute="height" secondItem="EEh-F5-GGC" secondAttribute="height" id="XbZ-Y5-CVl"/>
                             <constraint firstItem="y9S-Wb-9hK" firstAttribute="leading" secondItem="EEh-F5-GGC" secondAttribute="leadingMargin" id="XeW-6n-77e"/>
                             <constraint firstItem="W6X-Se-ifI" firstAttribute="leading" secondItem="EEh-F5-GGC" secondAttribute="leadingMargin" constant="30" id="ZC3-jf-wlm"/>
+                            <constraint firstItem="f8V-uN-JFT" firstAttribute="height" secondItem="leo-KF-Nue" secondAttribute="height" id="b1Q-Xp-rVj"/>
                             <constraint firstItem="lTf-ea-9dx" firstAttribute="top" secondItem="W6X-Se-ifI" secondAttribute="bottom" constant="16" id="cNL-Tu-TJG"/>
                             <constraint firstItem="etL-DL-sQg" firstAttribute="leading" secondItem="y9S-Wb-9hK" secondAttribute="trailing" id="gKk-28-Q4j"/>
-                            <constraint firstItem="y9S-Wb-9hK" firstAttribute="height" secondItem="etL-DL-sQg" secondAttribute="height" id="iYO-Rk-Bez"/>
+                            <constraint firstItem="y9S-Wb-9hK" firstAttribute="height" secondItem="etL-DL-sQg" secondAttribute="height" id="jDd-Xh-MDM"/>
                             <constraint firstItem="leo-KF-Nue" firstAttribute="top" secondItem="f8V-uN-JFT" secondAttribute="top" id="llG-1k-Ka7"/>
                             <constraint firstItem="y9S-Wb-9hK" firstAttribute="top" secondItem="etL-DL-sQg" secondAttribute="top" id="nwF-TO-i6o"/>
                             <constraint firstAttribute="centerY" secondItem="f8V-uN-JFT" secondAttribute="centerY" id="oX6-2T-4dU"/>
                             <constraint firstItem="3zc-df-6V1" firstAttribute="top" secondItem="aek-GC-MwX" secondAttribute="bottom" id="uEU-dg-lQg"/>
-                            <constraint firstItem="leo-KF-Nue" firstAttribute="width" secondItem="f8V-uN-JFT" secondAttribute="width" id="yKB-5y-MAl"/>
                             <constraint firstItem="y9S-Wb-9hK" firstAttribute="width" secondItem="etL-DL-sQg" secondAttribute="width" id="z2F-MC-eQT"/>
-                            <constraint firstItem="leo-KF-Nue" firstAttribute="height" secondItem="f8V-uN-JFT" secondAttribute="height" id="zMM-iw-WWu"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="iYO-Rk-Bez"/>
-                                <exclude reference="yKB-5y-MAl"/>
-                                <exclude reference="zMM-iw-WWu"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=regular">
-                            <mask key="constraints">
-                                <include reference="iYO-Rk-Bez"/>
-                                <include reference="yKB-5y-MAl"/>
-                                <include reference="zMM-iw-WWu"/>
-                            </mask>
-                        </variation>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -261,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifq-47-7pA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1101" y="184.5"/>
+            <point key="canvasLocation" x="1101" y="184"/>
         </scene>
         <!--Config View Controller-->
         <scene sceneID="md7-jz-fkM">
@@ -340,6 +325,6 @@
         <image name="right_d_pad" width="296" height="198"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uUA-ON-C5H"/>
+        <segue reference="bBc-aI-mA5"/>
     </inferredMetricsTieBreakers>
 </document>
