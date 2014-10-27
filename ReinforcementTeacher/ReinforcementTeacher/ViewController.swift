@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     var requestSender: HttpRequestSender?
     // Settings for the server
     let prefix = "http://"
+    let port = ":8001"
     let serveradress = "/marioserver"
 
     // Variables...
@@ -125,7 +126,7 @@ class ViewController: UIViewController {
         {
             var NESparams = ["option":option,  "command":command, "name":self.user!.myusername] as Dictionary<String, String>
             
-            var myurl = prefix + user!.ipaddress + serveradress
+            var myurl = prefix + user!.ipaddress + port + serveradress
             var second = myurl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
             
             requestSender = HttpRequestSender(params: NESparams, url: second!, vc: self)

@@ -31,6 +31,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    
+    @IBAction func buttonPressed(sender: AnyObject) {
+        if self.usernameField.text == "" {
+            usernameField.text = "AnonymousUser"
+        } else {
+            self.performSegueWithIdentifier("loginSegue", sender: sender)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         usernameField.delegate = self
@@ -44,7 +53,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             var newUser = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: context) as NSManagedObject
             newUser.setValue("" + usernameField.text, forKey: "myusername")
-            newUser.setValue("162.157.27.2:8001", forKey: "ipaddress")
+            newUser.setValue("Mariocontroller.noip.me", forKey: "ipaddress")
             context.save(nil)
             
         } else if segue.identifier == "skipLogin" {
