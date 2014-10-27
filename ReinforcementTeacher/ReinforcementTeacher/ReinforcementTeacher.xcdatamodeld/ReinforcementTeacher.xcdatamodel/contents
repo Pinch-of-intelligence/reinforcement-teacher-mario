@@ -2,7 +2,7 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="13F34" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="User" representedClassName="ReinforcementTeacher.User" syncable="YES">
         <attribute name="ipaddress" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myusername" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="User" positionX="-54" positionY="-9" width="128" height="75"/>

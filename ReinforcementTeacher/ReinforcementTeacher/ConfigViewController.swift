@@ -23,6 +23,7 @@ class ConfigViewController: UIViewController, UITextFieldDelegate {
         }()
     
     @IBOutlet weak var ipfield: UITextField!
+    @IBOutlet weak var usernameField: UITextField!
     
     var user:User?
     
@@ -33,9 +34,10 @@ class ConfigViewController: UIViewController, UITextFieldDelegate {
         if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [User] {
             user = fetchResults[0]
             ipfield!.text = user!.ipaddress
-
+            usernameField.text = user!.myusername
         }
         ipfield.delegate = self
+        usernameField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,12 +48,16 @@ class ConfigViewController: UIViewController, UITextFieldDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "returnToViewControllerSegue"{
             if let myip = ipfield.text {
-                let fetchRequest = NSFetchRequest(entityName: "User")
-                if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [User] {
-                    user = fetchResults[0]
-                    user?.ipaddress = myip
-                    managedObjectContext!.save(nil)
+                if let myusername = usernameField.text {
+                    let fetchRequest = NSFetchRequest(entityName: "User")
+                    if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [User] {
+                        user = fetchResults[0]
+                        user?.ipaddress = myip
+                        user?.myusername = myusername
+                        managedObjectContext!.save(nil)
+                    }
                 }
+                
             }
         }
     }

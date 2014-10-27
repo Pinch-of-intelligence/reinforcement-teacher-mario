@@ -11,7 +11,7 @@ import CoreData
 
 class User: NSManagedObject {
 
-    @NSManaged var username: String
+    @NSManaged var myusername: String
     @NSManaged var ipaddress: String
 
 }

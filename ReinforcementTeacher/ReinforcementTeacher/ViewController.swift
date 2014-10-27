@@ -53,8 +53,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        var appDel = UIApplication.sharedApplication().delegate as AppDelegate
         let fetchRequest = NSFetchRequest(entityName: "User")
+        fetchRequest.returnsObjectsAsFaults = false
+        
         if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [User] {
             user = fetchResults[0]
         }
@@ -121,7 +123,8 @@ class ViewController: UIViewController {
         
         if (queue.operationCount == 0 && user != nil)
         {
-            var NESparams = ["option":option,  "command":command, "name":user!.username] as Dictionary<String, String>
+            var NESparams = ["option":option,  "command":command, "name":self.user!.myusername] as Dictionary<String, String>
+            
             var myurl = prefix + user!.ipaddress + serveradress
             var second = myurl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
             

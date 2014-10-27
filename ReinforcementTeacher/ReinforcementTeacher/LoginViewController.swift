@@ -10,42 +10,45 @@ import UIKit
 import CoreData
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
-    
-    lazy var managedObjectContext : NSManagedObjectContext? = {
-        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        if let managedObjectContext = appDelegate.managedObjectContext {
-            return managedObjectContext
-        }
-        else {
-            return nil
-        }
-        }()
-    
-    var user :User?
 
     @IBOutlet weak var usernameField: UITextField!
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        var appDel = UIApplication.sharedApplication().delegate as AppDelegate
+        var context: NSManagedObjectContext = appDel.managedObjectContext!
+        
+        var request = NSFetchRequest(entityName: "User")
+        request.returnsObjectsAsFaults = false
+        var err: NSErrorPointer = nil
+        var results: NSArray = context.executeFetchRequest(request, error: err)!
+        
+        if results.count > 0 {
+            self.view.hidden = true
+            self.performSegueWithIdentifier("skipLogin", sender: self)
+        } else {
+            self.view.hidden = false
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let fetchRequest = NSFetchRequest(entityName: "User")
-        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [User] {
-            if fetchResults.count == 0 {
-                user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as User
-                user!.ipaddress = "192.168.2.25:8001"
-                managedObjectContext!.save(nil)
-            }
-            else {
-                user = fetchResults[0]
-            }
-        }
         usernameField.delegate = self
         
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "loginSegue"{
-            user!.username = usernameField.text
-            managedObjectContext!.save(nil)
+            var appDel = UIApplication.sharedApplication().delegate as AppDelegate
+            var context: NSManagedObjectContext = appDel.managedObjectContext!
+            
+            var newUser = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: context) as NSManagedObject
+            newUser.setValue("" + usernameField.text, forKey: "myusername")
+            newUser.setValue("162.157.27.2:8001", forKey: "ipaddress")
+            context.save(nil)
+            
+        } else if segue.identifier == "skipLogin" {
+            //do nothing
         }
     }
     
