@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kW5-c0-EGv">
-                                <rect key="frame" x="240" y="339" width="121" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kW5-c0-EGv">
+                                <rect key="frame" x="240" y="96" width="121" height="30"/>
                                 <color key="backgroundColor" red="0.8802224864" green="0.00048087099700000002" blue="0.027441812560000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="121" id="9g0-7x-eLR"/>
@@ -35,27 +35,31 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.setMasksBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="340" y="172" width="121" height="30"/>
+                                </variation>
                                 <connections>
                                     <segue destination="mvQ-Em-7Ym" kind="show" identifier="loginSegue" id="U4E-MQ-LoM"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="QwY-Px-qmd">
-                                <rect key="frame" x="221" y="285" width="159" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="QwY-Px-qmd">
+                                <rect key="frame" x="221" y="46" width="159" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="159" id="NT1-n4-FgD"/>
+                                    <constraint firstAttribute="width" constant="159" id="NT1-n4-FgD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="321" y="118" width="159" height="30"/>
+                                </variation>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kW5-c0-EGv" firstAttribute="top" secondItem="QwY-Px-qmd" secondAttribute="bottom" constant="24" id="5ro-Gp-a6w"/>
-                            <constraint firstAttribute="centerY" secondItem="QwY-Px-qmd" secondAttribute="centerY" id="DLo-VJ-ggc"/>
-                            <constraint firstAttribute="centerY" secondItem="kW5-c0-EGv" secondAttribute="centerY" constant="-54" id="JGm-oL-g3C"/>
+                            <constraint firstItem="kW5-c0-EGv" firstAttribute="top" secondItem="QwY-Px-qmd" secondAttribute="bottom" constant="25" id="5ro-Gp-a6w"/>
                             <constraint firstItem="kW5-c0-EGv" firstAttribute="centerX" secondItem="QwY-Px-qmd" secondAttribute="centerX" id="LFf-Tx-VNf"/>
                             <constraint firstAttribute="centerX" secondItem="QwY-Px-qmd" secondAttribute="centerX" id="WDc-TO-sHR"/>
-                            <constraint firstAttribute="centerY" secondItem="kW5-c0-EGv" secondAttribute="centerY" constant="-54" id="naQ-gK-VtK"/>
+                            <constraint firstItem="QwY-Px-qmd" firstAttribute="top" secondItem="qVZ-Jf-jWm" secondAttribute="bottom" constant="25" id="g7l-fE-eQD"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -84,85 +88,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background_nes" translatesAutoresizingMaskIntoConstraints="NO" id="WEG-Ci-mUM">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                             </imageView>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8V-uN-JFT">
-                                <rect key="frame" x="484" y="262" width="100" height="75"/>
-                                <color key="backgroundColor" red="0.89438264270000001" green="0.20979345939999999" blue="0.20979345939999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="Q3e-eV-ybf"/>
-                                    <constraint firstAttribute="width" constant="100" id="aUb-qk-PhQ"/>
-                                </constraints>
-                                <state key="normal" title="Jump" backgroundImage="nes_red_button">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="touchDown:" destination="mvQ-Em-7Ym" eventType="touchDown" id="rAT-Vo-Zgx"/>
-                                    <action selector="touchUpInside:" destination="mvQ-Em-7Ym" eventType="touchUpInside" id="wpK-Bz-HER"/>
-                                    <action selector="touchUpOutside:" destination="mvQ-Em-7Ym" eventType="touchUpOutside" id="aGz-rJ-3y5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etL-DL-sQg">
-                                <rect key="frame" x="116" y="262" width="100" height="75"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="U9P-DS-tSZ"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="right_d_pad">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchDown:" destination="mvQ-Em-7Ym" eventType="touchDown" id="Wuh-gT-ME2"/>
-                                    <action selector="touchUpInside:" destination="mvQ-Em-7Ym" eventType="touchUpInside" id="aj4-4z-uiC"/>
-                                    <action selector="touchUpOutside:" destination="mvQ-Em-7Ym" eventType="touchUpOutside" id="EcE-9D-ksI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leo-KF-Nue">
-                                <rect key="frame" x="364" y="262" width="100" height="75"/>
-                                <color key="backgroundColor" red="0.89438264270000001" green="0.20979345939999999" blue="0.20979345939999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="cUa-z3-tBI"/>
-                                    <constraint firstAttribute="width" constant="100" id="nX2-Ac-1DT"/>
-                                </constraints>
-                                <state key="normal" title="Fire" backgroundImage="nes_red_button">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="touchDown:" destination="mvQ-Em-7Ym" eventType="touchDown" id="BMv-8r-K2L"/>
-                                    <action selector="touchUpInside:" destination="mvQ-Em-7Ym" eventType="touchUpInside" id="YF2-4s-tTG"/>
-                                    <action selector="touchUpOutside:" destination="mvQ-Em-7Ym" eventType="touchUpOutside" id="7S0-gA-mSM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9S-Wb-9hK">
-                                <rect key="frame" x="16" y="262" width="100" height="75"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="FqX-Xz-MTx"/>
-                                    <constraint firstAttribute="height" constant="75" id="YWu-LL-BaM"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="left_d_pad">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchDown:" destination="mvQ-Em-7Ym" eventType="touchDown" id="dho-me-uts"/>
-                                    <action selector="touchUpInside:" destination="mvQ-Em-7Ym" eventType="touchUpInside" id="djb-1y-EbU"/>
-                                    <action selector="touchUpOutside:" destination="mvQ-Em-7Ym" eventType="touchUpOutside" id="TaW-we-Awo"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zc-df-6V1">
                                 <rect key="frame" x="538" y="20" width="46" height="30"/>
                                 <constraints>
@@ -182,16 +107,117 @@
                                 <rect key="frame" x="43" y="411" width="360" height="129"/>
                                 <color key="tintColor" red="0.90238620920000001" green="0.032476512030000002" blue="0.062112574900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="129" id="5bm-RS-YEN"/>
-                                    <constraint firstAttribute="width" constant="360" id="ect-6N-Idq"/>
+                                    <constraint firstAttribute="height" constant="129" id="5bm-RS-YEN">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="100"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="360" id="ect-6N-Idq">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="300"/>
+                                    </constraint>
                                 </constraints>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="41" y="238" width="161" height="98"/>
+                                </variation>
                             </textView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9S-Wb-9hK">
+                                <rect key="frame" x="16" y="249.5" width="130" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="FqX-Xz-MTx">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="60" id="YWu-LL-BaM">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                    </constraint>
+                                </constraints>
+                                <state key="normal" backgroundImage="left_d_pad">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchDown:" destination="mvQ-Em-7Ym" eventType="touchDown" id="dho-me-uts"/>
+                                    <action selector="touchUpInside:" destination="mvQ-Em-7Ym" eventType="touchUpInside" id="djb-1y-EbU"/>
+                                    <action selector="touchUpOutside:" destination="mvQ-Em-7Ym" eventType="touchUpOutside" id="TaW-we-Awo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etL-DL-sQg">
+                                <rect key="frame" x="146" y="249.5" width="130" height="198"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" backgroundImage="right_d_pad">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchDown:" destination="mvQ-Em-7Ym" eventType="touchDown" id="Wuh-gT-ME2"/>
+                                    <action selector="touchUpInside:" destination="mvQ-Em-7Ym" eventType="touchUpInside" id="aj4-4z-uiC"/>
+                                    <action selector="touchUpOutside:" destination="mvQ-Em-7Ym" eventType="touchUpOutside" id="EcE-9D-ksI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8V-uN-JFT">
+                                <rect key="frame" x="524" y="274.5" width="60" height="50"/>
+                                <color key="backgroundColor" red="0.89438264270000001" green="0.20979345939999999" blue="0.20979345939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Jump" backgroundImage="nes_red_button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="324" y="170" width="70" height="60"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="601" y="312" width="183" height="175"/>
+                                </variation>
+                                <connections>
+                                    <action selector="touchDown:" destination="mvQ-Em-7Ym" eventType="touchDown" id="rAT-Vo-Zgx"/>
+                                    <action selector="touchUpInside:" destination="mvQ-Em-7Ym" eventType="touchUpInside" id="wpK-Bz-HER"/>
+                                    <action selector="touchUpOutside:" destination="mvQ-Em-7Ym" eventType="touchUpOutside" id="aGz-rJ-3y5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leo-KF-Nue">
+                                <rect key="frame" x="444" y="274.5" width="60" height="50"/>
+                                <color key="backgroundColor" red="0.89438264270000001" green="0.20979345939999999" blue="0.20979345939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cUa-z3-tBI">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="60"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="60" id="nX2-Ac-1DT">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="70"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                    </constraint>
+                                </constraints>
+                                <state key="normal" title="Fire" backgroundImage="nes_red_button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="246" y="170" width="70" height="60"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="481" y="340" width="120" height="120"/>
+                                </variation>
+                                <connections>
+                                    <action selector="touchDown:" destination="mvQ-Em-7Ym" eventType="touchDown" id="BMv-8r-K2L"/>
+                                    <action selector="touchUpInside:" destination="mvQ-Em-7Ym" eventType="touchUpInside" id="YF2-4s-tTG"/>
+                                    <action selector="touchUpOutside:" destination="mvQ-Em-7Ym" eventType="touchUpOutside" id="7S0-gA-mSM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="f8V-uN-JFT" firstAttribute="leading" secondItem="leo-KF-Nue" secondAttribute="trailing" constant="20" id="9qF-qH-hqW"/>
+                            <constraint firstItem="f8V-uN-JFT" firstAttribute="leading" secondItem="leo-KF-Nue" secondAttribute="trailing" constant="10" id="9qF-qH-hqW"/>
                             <constraint firstAttribute="centerY" secondItem="y9S-Wb-9hK" secondAttribute="centerY" id="DfK-Sl-0im"/>
                             <constraint firstItem="WEG-Ci-mUM" firstAttribute="width" secondItem="EEh-F5-GGC" secondAttribute="width" id="FTd-f3-a7X"/>
                             <constraint firstItem="3zc-df-6V1" firstAttribute="trailing" secondItem="EEh-F5-GGC" secondAttribute="trailingMargin" id="Fr9-IB-Zc5"/>
@@ -200,15 +226,32 @@
                             <constraint firstAttribute="centerX" secondItem="WEG-Ci-mUM" secondAttribute="centerX" id="WvO-jm-mUy"/>
                             <constraint firstItem="WEG-Ci-mUM" firstAttribute="height" secondItem="EEh-F5-GGC" secondAttribute="height" id="XbZ-Y5-CVl"/>
                             <constraint firstItem="y9S-Wb-9hK" firstAttribute="leading" secondItem="EEh-F5-GGC" secondAttribute="leadingMargin" id="XeW-6n-77e"/>
-                            <constraint firstItem="W6X-Se-ifI" firstAttribute="leading" secondItem="EEh-F5-GGC" secondAttribute="leadingMargin" constant="27" id="ZC3-jf-wlm"/>
+                            <constraint firstItem="W6X-Se-ifI" firstAttribute="leading" secondItem="EEh-F5-GGC" secondAttribute="leadingMargin" constant="30" id="ZC3-jf-wlm"/>
                             <constraint firstItem="lTf-ea-9dx" firstAttribute="top" secondItem="W6X-Se-ifI" secondAttribute="bottom" constant="16" id="cNL-Tu-TJG"/>
                             <constraint firstItem="etL-DL-sQg" firstAttribute="leading" secondItem="y9S-Wb-9hK" secondAttribute="trailing" id="gKk-28-Q4j"/>
+                            <constraint firstItem="y9S-Wb-9hK" firstAttribute="height" secondItem="etL-DL-sQg" secondAttribute="height" id="iYO-Rk-Bez"/>
                             <constraint firstItem="leo-KF-Nue" firstAttribute="top" secondItem="f8V-uN-JFT" secondAttribute="top" id="llG-1k-Ka7"/>
                             <constraint firstItem="y9S-Wb-9hK" firstAttribute="top" secondItem="etL-DL-sQg" secondAttribute="top" id="nwF-TO-i6o"/>
                             <constraint firstAttribute="centerY" secondItem="f8V-uN-JFT" secondAttribute="centerY" id="oX6-2T-4dU"/>
                             <constraint firstItem="3zc-df-6V1" firstAttribute="top" secondItem="aek-GC-MwX" secondAttribute="bottom" id="uEU-dg-lQg"/>
+                            <constraint firstItem="leo-KF-Nue" firstAttribute="width" secondItem="f8V-uN-JFT" secondAttribute="width" id="yKB-5y-MAl"/>
                             <constraint firstItem="y9S-Wb-9hK" firstAttribute="width" secondItem="etL-DL-sQg" secondAttribute="width" id="z2F-MC-eQT"/>
+                            <constraint firstItem="leo-KF-Nue" firstAttribute="height" secondItem="f8V-uN-JFT" secondAttribute="height" id="zMM-iw-WWu"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="iYO-Rk-Bez"/>
+                                <exclude reference="yKB-5y-MAl"/>
+                                <exclude reference="zMM-iw-WWu"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="iYO-Rk-Bez"/>
+                                <include reference="yKB-5y-MAl"/>
+                                <include reference="zMM-iw-WWu"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -218,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifq-47-7pA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075" y="263"/>
+            <point key="canvasLocation" x="1101" y="184.5"/>
         </scene>
         <!--Config View Controller-->
         <scene sceneID="md7-jz-fkM">
@@ -297,6 +340,6 @@
         <image name="right_d_pad" width="296" height="198"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="U4E-MQ-LoM"/>
+        <segue reference="uUA-ON-C5H"/>
     </inferredMetricsTieBreakers>
 </document>
