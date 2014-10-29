@@ -120,10 +120,11 @@ class ViewController: UIViewController {
                 option = "pressButtons";
             }
         }
-        previousCommand = command;
+
         
         if (queue.operationCount == 0 && user != nil)
         {
+            previousCommand = command;
             var NESparams = ["option":option,  "command":command, "name":self.user!.myusername] as Dictionary<String, String>
             
             var myurl = prefix + user!.ipaddress + port + serveradress
@@ -149,19 +150,19 @@ class ViewController: UIViewController {
     @IBAction func touchDown(sender: AnyObject) {
         
         if let buttonType = ButtonTypes(rawValue: sender.tag){
-        switch(buttonType)
-        {
-        case .Left:
-        pressedLeft = true;
-        case .Right:
-        pressedRight = true;
-        case .Fire:
-        pressedFire = true;
-        case .Jump:
-        pressedJump = true;
-        default:
-        println("Untagged button pressed")
-        }
+            switch(buttonType)
+            {
+                case .Left:
+                    pressedLeft = true;
+                case .Right:
+                    pressedRight = true;
+                case .Fire:
+                    pressedFire = true;
+                case .Jump:
+                    pressedJump = true;
+                default:
+                    println("Untagged button pressed")
+            }
         }
         
     }
@@ -177,19 +178,19 @@ class ViewController: UIViewController {
     {
         
         if let buttonType = ButtonTypes(rawValue: sender.tag){
-        switch(buttonType)
-        {
-        case .Left:
-        pressedLeft = false;
-        case .Right:
-        pressedRight = false;
-        case .Fire:
-        pressedFire = false;
-        case .Jump:
-        pressedJump = false;
-        default:
-        println("Released untagged button ")
-        }
+            switch(buttonType)
+            {
+                case .Left:
+                    pressedLeft = false;
+                case .Right:
+                    pressedRight = false;
+                case .Fire:
+                    pressedFire = false;
+                case .Jump:
+                    pressedJump = false;
+                default:
+                    println("Released untagged button ")
+            }
         }
     }
 
